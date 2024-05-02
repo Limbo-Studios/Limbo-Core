@@ -95,6 +95,18 @@ export class MojangRestAPI {
                 essential: true
             },
             {
+                service: 'mojang-multiplayer-session-service',
+                status: MojangStatusColor.GREY,
+                name: 'Servicios de mojang',
+                essential: true
+            },
+            {
+                service: 'limbo-auth-proxy',
+                status: MojangStatusColor.GREY,
+                name: 'Proxy de LimboAuth',
+                essential: true
+            },
+            {
                 service: 'skins',
                 status: MojangStatusColor.GREY,
                 name: 'Minecraft Skins',
