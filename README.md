@@ -1,4 +1,4 @@
-# Helios-Core test
+# Helios-Core
 
 A library containing core mechanisms for Helios Launcher
 
