@@ -12,6 +12,7 @@ export enum MojangErrorCode {
     ERROR_INVALID_TOKEN,
     ERROR_ACCESS_TOKEN_HAS_PROFILE, // ??
     ERROR_CREDENTIALS_MISSING,      // INTERNAL
+    ERROR_PLAYER_NOT_FOUND,
     ERROR_INVALID_SALT_VERSION,     // ??
     ERROR_UNSUPPORTED_MEDIA_TYPE,   // INTERNAL
     ERROR_GONE,
@@ -52,6 +53,8 @@ export function decipherErrorCode(body: MojangErrorBody): MojangErrorCode {
 
         if(body.errorMessage === 'Invalid credentials. Invalid username or password.') {
             return MojangErrorCode.ERROR_INVALID_CREDENTIALS
+        } else if(body.errorMessage === 'Player not found.') {
+            return MojangErrorCode.ERROR_PLAYER_NOT_FOUND
         } else if(body.errorMessage === 'Invalid credentials.') {
             return MojangErrorCode.ERROR_RATELIMIT
         } else if(body.errorMessage === 'Invalid token.') {

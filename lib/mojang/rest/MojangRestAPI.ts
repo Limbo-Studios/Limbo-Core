@@ -59,7 +59,7 @@ export class MojangRestAPI {
 
     private static readonly TIMEOUT = 2500
 
-    public static readonly AUTH_ENDPOINT = 'https://auth.lsmp.site/api/yggdrasil'
+    public static readonly AUTH_ENDPOINT = 'https://auth.lsmp.site/authlib-injector'
     public static readonly STATUS_ENDPOINT = 'https://raw.githubusercontent.com/Limbo-Studios/limbo-status-page/master/history/summary.json'
 
     private static authClient = got.extend({
@@ -98,12 +98,6 @@ export class MojangRestAPI {
                 service: 'mojang-multiplayer-session-service',
                 status: MojangStatusColor.GREY,
                 name: 'Servicios de mojang',
-                essential: true
-            },
-            {
-                service: 'limbo-auth-proxy',
-                status: MojangStatusColor.GREY,
-                name: 'Proxy de LimboAuth',
                 essential: true
             },
             {
