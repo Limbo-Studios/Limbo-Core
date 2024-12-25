@@ -171,7 +171,7 @@ describe('[Mojang Rest API] Auth', () => {
                 return mockResponse
             })
 
-        const res = await MojangRestAPI.refresh('gfd', 'xxx', true)
+        const res = await MojangRestAPI.refresh('gfd', 'xxx', 'xd', 'ahh', true)
         expectSuccess(res)
         expect(res.data!.clientToken).to.equal('xxx')
         expect(res.data).to.have.property('user')
