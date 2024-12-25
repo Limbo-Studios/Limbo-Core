@@ -356,13 +356,17 @@ export class MojangRestAPI {
      * 
      * @see http://wiki.vg/Authentication#Refresh
      */
-    public static async refresh(accessToken: string, clientToken: string, requestUser = true): Promise<MojangResponse<Session | null>> {
+    public static async refresh(accessToken: string, clientToken: string, uuid: string, username: string, requestUser = true): Promise<MojangResponse<Session | null>> {
 
         try {
 
             const json = {
                 accessToken,
                 clientToken,
+                'selectedProfile': {
+                    'id': uuid,
+                    'name': username
+                },
                 requestUser
             }
 
