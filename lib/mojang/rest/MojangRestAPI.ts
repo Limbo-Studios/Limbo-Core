@@ -59,8 +59,8 @@ export class MojangRestAPI {
 
     private static readonly TIMEOUT = 2500
 
-    public static readonly AUTH_ENDPOINT = 'https://auth.lsmp.site/authlib-injector'
-    public static readonly STATUS_ENDPOINT = 'https://raw.githubusercontent.com/Limbo-Studios/limbo-status-page/master/history/summary.json'
+    public static readonly AUTH_ENDPOINT = 'https://minecraft.everland.lsmp.site/authlib-injector'
+    public static readonly STATUS_ENDPOINT = 'https://raw.githubusercontent.com/Limbo-Studios/everland-status-page/master/history/summary.json'
 
     private static authClient = got.extend({
         prefixUrl: MojangRestAPI.AUTH_ENDPOINT,
@@ -97,8 +97,8 @@ export class MojangRestAPI {
             {
                 service: 'mojang-multiplayer-session-service',
                 status: MojangStatusColor.GREY,
-                name: 'Servicios de mojang',
-                essential: true
+                name: 'Servicios de Mojang',
+                essential: false
             },
             {
                 service: 'skins',
@@ -115,13 +115,13 @@ export class MojangRestAPI {
             {
                 service: 'main-limbo-auth-website',
                 status: MojangStatusColor.GREY,
-                name: 'Web de LimboAuth',
+                name: 'Web de LimboAuth para Everland',
                 essential: false
             },
             {
                 service: 'limbo-yggdrasil',
                 status: MojangStatusColor.GREY,
-                name: 'Perfiles de Minecraft para Cuentas de LimboAuth',
+                name: 'Perfiles de Minecraft para Cuentas de Everland',
                 essential: false
             }
         ]
